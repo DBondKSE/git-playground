@@ -46,6 +46,9 @@ while not is_game_over():
 
     if not guess_is_valid(guess):
         continue
+    if guess in guesses:
+        print(f"You have already entered this word")
+        continue
 
     if guess in full_list:
         guessed += 1
